@@ -36,7 +36,12 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                         @guest
+                        @else
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('contatos') }}">Contatos <span class="sr-only">(current)</span></a>
+                        </li>
+                        @endguest
                     </ul>
 
                     <!-- Right Side Of Navbar -->

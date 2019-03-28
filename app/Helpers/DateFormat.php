@@ -1,7 +1,6 @@
 <?php
 // https://laravel-news.com/creating-helpers
 // https://code.tutsplus.com/tutorials/how-to-create-a-laravel-helper--cms-28537
-
 if ( ! function_exists('dateFormatDatabaseScreen') )
 {
 	function dateFormatDatabaseScreen($data,$formato='database') {

@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Contato;
-use App\Http\Request\ContatoRequest;
+use App\Http\Requests\ContatoRequest;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Validator;
 
 class ContatoController extends Controller
 {
@@ -89,6 +91,6 @@ class ContatoController extends Controller
     public function destroy($id)
     {
         Contato::destroy($id);
-        return redirect('contato');
+        return redirect('contatos');
     }
 }

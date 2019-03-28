@@ -1,15 +1,11 @@
 <?php
-
 namespace App;
-
 use Illuminate\Database\Eloquent\Model;
-
 class Contato extends Model
 {
     protected $fillable = [
-    	'saudacao', 'nome', 'telefone', 'email', 'data_nascimento', 'avatar', 'nota'
+        'saudacao', 'nome', 'telefone', 'email', 'data_nascimento', 'avatar', 'nota'
     ];
-
     // Accessor
     public function getAvatarImageAttribute($value) {
         return $this->avatar == null ? asset('images/null.png') : asset($this->avatar);
@@ -34,5 +30,3 @@ class Contato extends Model
         $this->attributes['avatar'] = str_replace('public', 'storage', $filepath) . $filename;
     }
 }
-
-
